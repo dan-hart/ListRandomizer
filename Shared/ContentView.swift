@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var items: [Item] = []
-    @State private var currentItem: String = ""
+    @SceneStorage("items") private var items: CommaSeparatedItems = CommaSeparatedItems(rawValue: "")!
+    @SceneStorage("currentItem") private var currentItem: String = ""
     
     var body: some View {
         VStack {
@@ -21,7 +21,7 @@ struct ContentView: View {
                 TextField("Item", text: $currentItem)
                 Spacer()
                 Button(action: {
-                    items.append(Item(name: currentItem))
+                    items.values.append(currentItem)
                     currentItem = ""
                 }, label: {
                     Image(systemName: "plus.circle.fill")
@@ -31,28 +31,27 @@ struct ContentView: View {
             Divider()
             
             List {
-                ForEach(items) { (item) in
-                    Text(item.name)
+                ForEach(items.values, id: \.self) { (item) in
+                    Text(item)
                 }
             }
             
-            Button(action: {
-                items.shuffle()
-            }, label: {
-                Image(systemName: "shuffle.circle.fill")
-                    .font(.title)
-            })
-            
-            Spacer()
-            
-            Button(action: {
-                items = []
-            }, label: {
-                Image(systemName: "xmark.circle.fill")
-                    .font(.subheadline)
-            })
-            
-            Spacer()
+            HStack {
+                Button(action: {
+                    items = CommaSeparatedItems(rawValue: items.values.shuffled().joined(separator: ","))!
+                }, label: {
+                    Image(systemName: "shuffle.circle.fill")
+                })
+                
+                Spacer()
+                
+                Button(action: {
+                    items = CommaSeparatedItems(rawValue: "")!
+                }, label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .font(.subheadline)
+                })
+            }.padding()
         }
     }
 }
