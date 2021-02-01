@@ -24,7 +24,7 @@ struct ContentView: View {
                     items.append(Item(name: currentItem))
                     currentItem = ""
                 }, label: {
-                    Text("Add")
+                    Image(systemName: "plus.circle.fill")
                 })
             }.padding()
             
@@ -39,7 +39,7 @@ struct ContentView: View {
             Button(action: {
                 items.shuffle()
             }, label: {
-                Text("Shuffle")
+                Image(systemName: "shuffle.circle.fill")
                     .font(.title)
             })
             
@@ -48,7 +48,7 @@ struct ContentView: View {
             Button(action: {
                 items = []
             }, label: {
-                Text("Clear")
+                Image(systemName: "xmark.circle.fill")
                     .font(.subheadline)
             })
             
