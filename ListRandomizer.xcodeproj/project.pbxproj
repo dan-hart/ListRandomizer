@@ -15,6 +15,8 @@
 		523572CC25C86C1100E4E1D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523572A125C86C0F00E4E1D3 /* ContentView.swift */; };
 		523572CD25C86C1100E4E1D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523572A225C86C1100E4E1D3 /* Assets.xcassets */; };
 		523572CE25C86C1100E4E1D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523572A225C86C1100E4E1D3 /* Assets.xcassets */; };
+		5235730125C8720D00E4E1D3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235730025C8720D00E4E1D3 /* Item.swift */; };
+		5235730225C8720D00E4E1D3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235730025C8720D00E4E1D3 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		523572C225C86C1100E4E1D3 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		523572C625C86C1100E4E1D3 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		523572C825C86C1100E4E1D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5235730025C8720D00E4E1D3 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,7 @@
 			children = (
 				523572A025C86C0F00E4E1D3 /* ListRandomizerApp.swift */,
 				523572A125C86C0F00E4E1D3 /* ContentView.swift */,
+				5235730025C8720D00E4E1D3 /* Item.swift */,
 				523572A225C86C1100E4E1D3 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -309,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				523572CB25C86C1100E4E1D3 /* ContentView.swift in Sources */,
+				5235730125C8720D00E4E1D3 /* Item.swift in Sources */,
 				523572C925C86C1100E4E1D3 /* ListRandomizerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				523572CC25C86C1100E4E1D3 /* ContentView.swift in Sources */,
+				5235730225C8720D00E4E1D3 /* Item.swift in Sources */,
 				523572CA25C86C1100E4E1D3 /* ListRandomizerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
